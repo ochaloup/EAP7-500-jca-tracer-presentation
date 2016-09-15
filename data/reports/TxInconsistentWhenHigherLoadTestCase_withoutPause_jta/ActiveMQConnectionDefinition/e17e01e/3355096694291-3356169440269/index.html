@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                      "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>ConnectionListener: e17e01e (3355096694291-3356169440269)</title>
+</head>
+<body style="background: #D7D7D7;">
+<h1>ConnectionListener: e17e01e</h1>
+<table>
+<tr>
+<td><b>Pool:</b></td>
+<td>ActiveMQConnectionDefinition</td>
+</tr>
+<tr>
+<td><b>ManagedConnectionPool:</b></td>
+<td>5460947e</td>
+</tr>
+<tr>
+<td><b>ManagedConnection:</b></td>
+<td>6f44ea1f</td>
+</tr>
+<tr>
+<td><b>From:</b></td>
+<td>3355096694291</td>
+</tr>
+<tr>
+<td><b>To:</b></td>
+<td>3356169440269</td>
+</tr>
+<tr>
+<td><b>Thread:</b></td>
+<td>461</td>
+</tr>
+<tr>
+<td><b>Status:</b></td>
+<td><div style="color: green;">Green</div></td>
+</tr>
+</table>
+<h2>Sequence diagram</h2>
+<image src="e17e01e.png" alt="SDedit image"/>
+<p>
+Generate the image by: <i>sdedit -t png -o /home/ochaloup/presentations/EAP7-500-jca-tracer/data/reports/TxInconsistentWhenHigherLoadTestCase_withoutPause_jta/ActiveMQConnectionDefinition/e17e01e/3355096694291-3356169440269/e17e01e.png /home/ochaloup/presentations/EAP7-500-jca-tracer/data/reports/TxInconsistentWhenHigherLoadTestCase_withoutPause_jta/ActiveMQConnectionDefinition/e17e01e/3355096694291-3356169440269/e17e01e.sdx </i>
+<h2>Description</h2>
+<table>
+<thead align="left">
+<th>Timestamp</th>
+<th>Description</th>
+</thead>
+<tbody>
+<tr>
+<td>3355096694291</td>
+<td>getConnectionListener(true)</td>
+</tr>
+<tr>
+<td>3355100775179</td>
+<td>enlistResource()</td>
+</tr>
+<tr>
+<td>3355100899768</td>
+<td>getConnection(e841443)</td>
+</tr>
+<tr>
+<td>3355120303930</td>
+<td>returnConnection(e841443)</td>
+</tr>
+<tr>
+<td>3355728249423</td>
+<td>delistResource()</td>
+</tr>
+<tr>
+<td>3356169440269</td>
+<td>returnConnectionListener()</td>
+</tr>
+</tbody>
+</table>
+<h2>Data</h2>
+<pre>
+IJTRACER-ActiveMQConnectionDefinition-5460947e-461-1-3355096694291-e17e01e-DATA
+IJTRACER-ActiveMQConnectionDefinition-5460947e-461-20-3355100775179-e17e01e-TransactionImple < ac, BasicAction: 0:ffff7f000001:_6ecf9687:57da655d:88 status: ActionStatus.RUNNING >-
+IJTRACER-ActiveMQConnectionDefinition-5460947e-461-40-3355100899768-e17e01e-e841443-
+IJTRACER-ActiveMQConnectionDefinition-5460947e-461-41-3355120303930-e17e01e-e841443-
+IJTRACER-ActiveMQConnectionDefinition-5460947e-461-30-3355728249423-e17e01e-TransactionImple < ac, BasicAction: 0:ffff7f000001:_6ecf9687:57da655d:88 status: ActionStatus.RUNNING >-
+IJTRACER-ActiveMQConnectionDefinition-5460947e-461-10-3356169440269-e17e01e-DATA
+</pre>
+<p>
+<a href="../index.html">Back</a>
+</body>
+</html>

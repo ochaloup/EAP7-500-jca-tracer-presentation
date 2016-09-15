@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                      "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>ConnectionListener: 669547bc (3355670455861-3356222010182)</title>
+</head>
+<body style="background: #D7D7D7;">
+<h1>ConnectionListener: 669547bc</h1>
+<table>
+<tr>
+<td><b>Pool:</b></td>
+<td>CrashRecoveryDS</td>
+</tr>
+<tr>
+<td><b>ManagedConnectionPool:</b></td>
+<td>77599de9</td>
+</tr>
+<tr>
+<td><b>ManagedConnection:</b></td>
+<td>2e3eb337</td>
+</tr>
+<tr>
+<td><b>From:</b></td>
+<td>3355670455861</td>
+</tr>
+<tr>
+<td><b>To:</b></td>
+<td>3356222010182</td>
+</tr>
+<tr>
+<td><b>Thread:</b></td>
+<td>445</td>
+</tr>
+<tr>
+<td><b>Status:</b></td>
+<td><div style="color: green;">Green</div></td>
+</tr>
+</table>
+<h2>Sequence diagram</h2>
+<image src="669547bc.png" alt="SDedit image"/>
+<p>
+Generate the image by: <i>sdedit -t png -o /home/ochaloup/presentations/EAP7-500-jca-tracer/data/reports/TxInconsistentWhenHigherLoadTestCase_withoutPause_jta/CrashRecoveryDS/669547bc/3355670455861-3356222010182/669547bc.png /home/ochaloup/presentations/EAP7-500-jca-tracer/data/reports/TxInconsistentWhenHigherLoadTestCase_withoutPause_jta/CrashRecoveryDS/669547bc/3355670455861-3356222010182/669547bc.sdx </i>
+<h2>Description</h2>
+<table>
+<thead align="left">
+<th>Timestamp</th>
+<th>Description</th>
+</thead>
+<tbody>
+<tr>
+<td>3355670455861</td>
+<td>getConnectionListener(true)</td>
+</tr>
+<tr>
+<td>3355679640109</td>
+<td>enlistResource()</td>
+</tr>
+<tr>
+<td>3355679722468</td>
+<td>getConnection(36b958a4)</td>
+</tr>
+<tr>
+<td>3355691008501</td>
+<td>returnConnection(36b958a4)</td>
+</tr>
+<tr>
+<td>3355725718396</td>
+<td>delistResource()</td>
+</tr>
+<tr>
+<td>3356222010182</td>
+<td>returnConnectionListener()</td>
+</tr>
+</tbody>
+</table>
+<h2>Data</h2>
+<pre>
+IJTRACER-CrashRecoveryDS-77599de9-445-1-3355670455861-669547bc-DATA
+IJTRACER-CrashRecoveryDS-77599de9-445-20-3355679640109-669547bc-TransactionImple < ac, BasicAction: 0:ffff7f000001:_6ecf9687:57da655d:38 status: ActionStatus.RUNNING >-
+IJTRACER-CrashRecoveryDS-77599de9-445-40-3355679722468-669547bc-36b958a4-
+IJTRACER-CrashRecoveryDS-77599de9-445-41-3355691008501-669547bc-36b958a4-
+IJTRACER-CrashRecoveryDS-77599de9-445-30-3355725718396-669547bc-TransactionImple < ac, BasicAction: 0:ffff7f000001:_6ecf9687:57da655d:38 status: ActionStatus.RUNNING >-
+IJTRACER-CrashRecoveryDS-77599de9-445-10-3356222010182-669547bc-DATA
+</pre>
+<p>
+<a href="../index.html">Back</a>
+</body>
+</html>

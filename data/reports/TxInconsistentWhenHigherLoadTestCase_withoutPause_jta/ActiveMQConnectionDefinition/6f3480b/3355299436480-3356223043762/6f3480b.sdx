@@ -1,0 +1,29 @@
+#![ConnectionListener: 6f3480b]
+#!>>
+#!Start: 3355299436480
+#!End  : 3356223043762
+#!<<
+application:Application[a]
+cm:ConnectionManager[a]
+pool:Pool[a]
+mcp:MCP[a]
+/cl:ConnectionListener[a]
+tx:Transaction[a]
+/sync:Synchronization[a,x]
+
+application:cm.allocateConnection()
+cm:pool.getConnection()
+pool:mcp.getConnectionListener(true)
+mcp:cl.new()
+cl:tx.enlistResource()
+cl:sync.new()
+sync:tx.registerInterposed()
+application:cl.getConnection(7d8b5d3b)
+application:>cl.returnConnection(7d8b5d3b)
+[c beforeCompletion]
+cl:>sync.<free>
+sync:tx.delistResource()
+[/c]
+[c afterCompletion]
+sync:mcp.returnConnectionListener()
+[/c]

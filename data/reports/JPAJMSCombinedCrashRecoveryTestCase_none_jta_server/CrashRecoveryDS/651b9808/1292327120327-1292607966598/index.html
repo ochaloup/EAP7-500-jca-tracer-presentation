@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                      "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>ConnectionListener: 651b9808 (1292327120327-1292607966598)</title>
+</head>
+<body style="background: #D7D7D7;">
+<h1>ConnectionListener: 651b9808</h1>
+<table>
+<tr>
+<td><b>Pool:</b></td>
+<td>CrashRecoveryDS</td>
+</tr>
+<tr>
+<td><b>ManagedConnectionPool:</b></td>
+<td>536542ce</td>
+</tr>
+<tr>
+<td><b>ManagedConnection:</b></td>
+<td>30495521</td>
+</tr>
+<tr>
+<td><b>From:</b></td>
+<td>1292327120327</td>
+</tr>
+<tr>
+<td><b>To:</b></td>
+<td>1292607966598</td>
+</tr>
+<tr>
+<td><b>Thread:</b></td>
+<td>412</td>
+</tr>
+<tr>
+<td><b>Status:</b></td>
+<td><div style="color: green;">Green</div></td>
+</tr>
+</table>
+<h2>Sequence diagram</h2>
+<image src="651b9808.png" alt="SDedit image"/>
+<p>
+Generate the image by: <i>sdedit -t png -o /home/ochaloup/presentations/EAP7-500-jca-tracer/data/reports/JPAJMSCombinedCrashRecoveryTestCase_none_jta_server/CrashRecoveryDS/651b9808/1292327120327-1292607966598/651b9808.png /home/ochaloup/presentations/EAP7-500-jca-tracer/data/reports/JPAJMSCombinedCrashRecoveryTestCase_none_jta_server/CrashRecoveryDS/651b9808/1292327120327-1292607966598/651b9808.sdx </i>
+<h2>Description</h2>
+<table>
+<thead align="left">
+<th>Timestamp</th>
+<th>Description</th>
+</thead>
+<tbody>
+<tr>
+<td>1292327120327</td>
+<td>getConnectionListener()</td>
+</tr>
+<tr>
+<td>1292336964450</td>
+<td>enlistResource()</td>
+</tr>
+<tr>
+<td>1292337071811</td>
+<td>getConnection(14f8bb53)</td>
+</tr>
+<tr>
+<td>1292343065153</td>
+<td>returnConnection(14f8bb53)</td>
+</tr>
+<tr>
+<td>1292394321364</td>
+<td>getConnection(24e22942)</td>
+</tr>
+<tr>
+<td>1292396425979</td>
+<td>returnConnection(24e22942)</td>
+</tr>
+<tr>
+<td>1292398833275</td>
+<td>delistResource()</td>
+</tr>
+<tr>
+<td>1292607966598</td>
+<td>returnConnectionListener()</td>
+</tr>
+</tbody>
+</table>
+<h2>Data</h2>
+<pre>
+IJTRACER-CrashRecoveryDS-536542ce-412-0-1292327120327-651b9808-DATA
+IJTRACER-CrashRecoveryDS-536542ce-412-20-1292336964450-651b9808-TransactionImple < ac, BasicAction: 0:ffff7f000001:_13fa92d2:57da5d54:28 status: ActionStatus.RUNNING >-
+IJTRACER-CrashRecoveryDS-536542ce-412-40-1292337071811-651b9808-14f8bb53-
+IJTRACER-CrashRecoveryDS-536542ce-412-41-1292343065153-651b9808-14f8bb53-
+IJTRACER-CrashRecoveryDS-536542ce-412-40-1292394321364-651b9808-24e22942-
+IJTRACER-CrashRecoveryDS-536542ce-412-41-1292396425979-651b9808-24e22942-
+IJTRACER-CrashRecoveryDS-536542ce-412-30-1292398833275-651b9808-TransactionImple < ac, BasicAction: 0:ffff7f000001:_13fa92d2:57da5d54:28 status: ActionStatus.RUNNING >-
+IJTRACER-CrashRecoveryDS-536542ce-412-10-1292607966598-651b9808-DATA
+</pre>
+<p>
+<a href="../index.html">Back</a>
+</body>
+</html>

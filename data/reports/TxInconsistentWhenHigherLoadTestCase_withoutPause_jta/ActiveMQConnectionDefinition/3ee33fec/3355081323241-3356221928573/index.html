@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                      "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>ConnectionListener: 3ee33fec (3355081323241-3356221928573)</title>
+</head>
+<body style="background: #D7D7D7;">
+<h1>ConnectionListener: 3ee33fec</h1>
+<table>
+<tr>
+<td><b>Pool:</b></td>
+<td>ActiveMQConnectionDefinition</td>
+</tr>
+<tr>
+<td><b>ManagedConnectionPool:</b></td>
+<td>5460947e</td>
+</tr>
+<tr>
+<td><b>ManagedConnection:</b></td>
+<td>63e4691</td>
+</tr>
+<tr>
+<td><b>From:</b></td>
+<td>3355081323241</td>
+</tr>
+<tr>
+<td><b>To:</b></td>
+<td>3356221928573</td>
+</tr>
+<tr>
+<td><b>Thread:</b></td>
+<td>445</td>
+</tr>
+<tr>
+<td><b>Status:</b></td>
+<td><div style="color: green;">Green</div></td>
+</tr>
+</table>
+<h2>Sequence diagram</h2>
+<image src="3ee33fec.png" alt="SDedit image"/>
+<p>
+Generate the image by: <i>sdedit -t png -o /home/ochaloup/presentations/EAP7-500-jca-tracer/data/reports/TxInconsistentWhenHigherLoadTestCase_withoutPause_jta/ActiveMQConnectionDefinition/3ee33fec/3355081323241-3356221928573/3ee33fec.png /home/ochaloup/presentations/EAP7-500-jca-tracer/data/reports/TxInconsistentWhenHigherLoadTestCase_withoutPause_jta/ActiveMQConnectionDefinition/3ee33fec/3355081323241-3356221928573/3ee33fec.sdx </i>
+<h2>Description</h2>
+<table>
+<thead align="left">
+<th>Timestamp</th>
+<th>Description</th>
+</thead>
+<tbody>
+<tr>
+<td>3355081323241</td>
+<td>getConnectionListener(true)</td>
+</tr>
+<tr>
+<td>3355095851354</td>
+<td>enlistResource()</td>
+</tr>
+<tr>
+<td>3355095989105</td>
+<td>getConnection(7b380238)</td>
+</tr>
+<tr>
+<td>3355120240951</td>
+<td>returnConnection(7b380238)</td>
+</tr>
+<tr>
+<td>3355725582281</td>
+<td>delistResource()</td>
+</tr>
+<tr>
+<td>3356221928573</td>
+<td>returnConnectionListener()</td>
+</tr>
+</tbody>
+</table>
+<h2>Data</h2>
+<pre>
+IJTRACER-ActiveMQConnectionDefinition-5460947e-445-1-3355081323241-3ee33fec-DATA
+IJTRACER-ActiveMQConnectionDefinition-5460947e-445-20-3355095851354-3ee33fec-TransactionImple < ac, BasicAction: 0:ffff7f000001:_6ecf9687:57da655d:38 status: ActionStatus.RUNNING >-
+IJTRACER-ActiveMQConnectionDefinition-5460947e-445-40-3355095989105-3ee33fec-7b380238-
+IJTRACER-ActiveMQConnectionDefinition-5460947e-445-41-3355120240951-3ee33fec-7b380238-
+IJTRACER-ActiveMQConnectionDefinition-5460947e-445-30-3355725582281-3ee33fec-TransactionImple < ac, BasicAction: 0:ffff7f000001:_6ecf9687:57da655d:38 status: ActionStatus.RUNNING >-
+IJTRACER-ActiveMQConnectionDefinition-5460947e-445-10-3356221928573-3ee33fec-DATA
+</pre>
+<p>
+<a href="../index.html">Back</a>
+</body>
+</html>

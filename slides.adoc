@@ -1,0 +1,147 @@
+:source-highlighter: highlight.js
+:revealjs_theme: redhat
+:revealjs_controls: false
+:revealjs_center: true
+:revealjs_transition: concave
+
+:images: ./images
+
+= EAP7-500
+Ondra Chaloupka / ochaloup@redhat.com
+
+
+[NOTE.speaker]
+--
+asciidoctor -T asciidoctor-reveal.js/templates/slim slides.adoc
+--
+
+== JCA Tracer
+
+Tool which produces machine-readable codes at a special `TRACE` log category at key points
+making it easy to apply tooling of the data collected
+
+[NOTE.speaker]
+--
+IronJacamar
+How to build: http://www.ironjacamar.org/doc/developerguide/1.0/en-US/html_single/index.html#compiling
+git clone -b 1.3 git@github.com:ironjacamar/ironjacamar.git
+ant clean && ant jars
+--
+
+
+== How to setup EAP
+
+```
+/subsystem=logging/logger=org.jboss.jca.core.tracer:add(level=TRACE)
+/subsystem=jca/tracer=tracer:add(enabled=true)
+```
+
+=== How to setup EAP (XML)
+
+Logger added
+
+```
+<logger category="org.jboss.jca.core.tracer">
+    <level name="TRACE"/>
+</logger>
+```
+
+Jca subsystem adding new element
+
+```
+<tracer enabled="true"/>
+```
+
+=== Logger: new file handler
+
+```
+<file-handler name="jca-log-handler">
+    <file relative-to="jboss.server.log.dir" path="jca-server.log"/>
+    <append value="false"/>
+</file-handler>
+
+<logger category="org.jboss.jca.core.tracer">
+    <level name="TRACE"/>
+    <handlers>
+        <handler name="jca-log-handler"/>
+    </handlers>
+</logger>
+```
+
+== What you get
+
+`server.log` is filled with messages in format
+
+*IJTRACER*-CrashRecoveryDS-536542ce-283-80-1278790274766-NONE--
+
+== To generate report
+
+```
+java -cp target/ironjacamar-as.jar:target/ironjacamar-core-impl.jar:target/ironjacamar-core-api.jar\
+  org.jboss.jca.as.tracer.HTMLReport path/to/server.log
+```
+
+results under directory _${PWD}/report_
+
+== Sequence diagram
+
+image:{images}/sequence-diagram-example-73d1088f.png[role="noborder"]
+
+=== To get images
+
+```
+sdedit -t png -o _path_/report/CrashRecoveryDS/651b9808/1279533649835-1279801901201/651b9808.png\
+  _path_/report/CrashRecoveryDS/651b9808/1279533649835-1279801901201/651b9808.sdx
+```
+
+[NOTE.speaker]
+--
+. For getting sdedit installed go to https://sourceforge.net/projects/sdedit/
+. Download the jar file
+. Run or create an script file on `PATH`: `java -jar /home/ochaloup/Downloads/sdedit-4.2-beta8.jar $*`
+--
+
+== Narayana Transaction Analyser (NTA)
+
+```
+git clone git@github.com:jbosstm/transaction-analyser.git
+mvn clean install
+cp nta-dist/target/nta-*.ear $JBOSS_HOME/standalone/deployments
+cd $JBOSS_HOME
+./bin/standalone.sh -c standalone-full.xml
+```
+direct to: http://localhost:8080/nta/
+
+== NTA web app
+
+image:{images}/nta-screenshot.png[role="noborder"]
+
+== To enable analyze
+
+* set *Narayana* transaction loggging to level `TRACE`
+** setting could be done by clicking on button `Enable` in _NTA_
+
+```
+<logger category="com.arjuna">
+    <level name="TRACE"/>
+</logger>
+
+```
+
+[NOTE.speaker]
+--
+Demo
+cp demo/target/nta-demo-*.war $JBOSS_HOME/standalone/deployments/
+http://localhost:8080/txdemo
+--
+
+== ?!
+
+image:{images}/misc/cajk.jpg[role="noborder", height="550"]
+
+
+== References
+
+* https://issues.jboss.org/browse/EAP7-500
+* http://www.ironjacamar.org/doc/roadto12/tracer.html
+* https://github.com/jbosstm/transaction-analyser

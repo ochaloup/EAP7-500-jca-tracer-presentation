@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                      "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>ConnectionListener: 75936311 (1686407782546-1686676820081)</title>
+</head>
+<body style="background: #D7D7D7;">
+<h1>ConnectionListener: 75936311</h1>
+<table>
+<tr>
+<td><b>Pool:</b></td>
+<td>CrashRecoveryDS</td>
+</tr>
+<tr>
+<td><b>ManagedConnectionPool:</b></td>
+<td>67431adc</td>
+</tr>
+<tr>
+<td><b>ManagedConnection:</b></td>
+<td>1c341c24</td>
+</tr>
+<tr>
+<td><b>From:</b></td>
+<td>1686407782546</td>
+</tr>
+<tr>
+<td><b>To:</b></td>
+<td>1686676820081</td>
+</tr>
+<tr>
+<td><b>Thread:</b></td>
+<td>429</td>
+</tr>
+<tr>
+<td><b>Status:</b></td>
+<td><div style="color: red;">Red</div></td>
+</tr>
+</table>
+<h2>Sequence diagram</h2>
+See Description or Data for recorded data
+<h2>Description</h2>
+<table>
+<thead align="left">
+<th>Timestamp</th>
+<th>Description</th>
+</thead>
+<tbody>
+<tr>
+<td>1686407782546</td>
+<td>getConnectionListener()</td>
+</tr>
+<tr>
+<td>1686408718401</td>
+<td>enlistResource()</td>
+</tr>
+<tr>
+<td>1686408799788</td>
+<td>getConnection(6f11fabf)</td>
+</tr>
+<tr>
+<td>1686410085100</td>
+<td>returnConnection(6f11fabf)</td>
+</tr>
+<tr>
+<td>1686674679065</td>
+<td>getConnection(6a596514)</td>
+</tr>
+<tr>
+<td>1686675732938</td>
+<td>returnConnection(6a596514)</td>
+</tr>
+<tr>
+<td>1686676820081</td>
+<td>delistResource()</td>
+</tr>
+</tbody>
+</table>
+<h2>Data</h2>
+<pre>
+IJTRACER-CrashRecoveryDS-67431adc-429-0-1686407782546-75936311-DATA
+IJTRACER-CrashRecoveryDS-67431adc-429-20-1686408718401-75936311-TransactionImple < ac, BasicAction: 0:ffff7f000001:_5c802931:57da5edb:2d status: ActionStatus.RUNNING >-
+IJTRACER-CrashRecoveryDS-67431adc-429-40-1686408799788-75936311-6f11fabf-
+IJTRACER-CrashRecoveryDS-67431adc-429-41-1686410085100-75936311-6f11fabf-
+IJTRACER-CrashRecoveryDS-67431adc-429-40-1686674679065-75936311-6a596514-
+IJTRACER-CrashRecoveryDS-67431adc-429-41-1686675732938-75936311-6a596514-
+IJTRACER-CrashRecoveryDS-67431adc-429-30-1686676820081-75936311-TransactionImple < ac, BasicAction: 0:ffff7f000001:_5c802931:57da5edb:2d status: ActionStatus.RUNNING >-
+</pre>
+<p>
+<a href="../index.html">Back</a>
+</body>
+</html>

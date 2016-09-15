@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                      "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>ConnectionListener: 34fcc08e (3353699813196-3353710154722)</title>
+</head>
+<body style="background: #D7D7D7;">
+<h1>ConnectionListener: 34fcc08e</h1>
+<table>
+<tr>
+<td><b>Pool:</b></td>
+<td>ActiveMQConnectionDefinition</td>
+</tr>
+<tr>
+<td><b>ManagedConnectionPool:</b></td>
+<td>5460947e</td>
+</tr>
+<tr>
+<td><b>ManagedConnection:</b></td>
+<td>431edcf5</td>
+</tr>
+<tr>
+<td><b>From:</b></td>
+<td>3353699813196</td>
+</tr>
+<tr>
+<td><b>To:</b></td>
+<td>3353710154722</td>
+</tr>
+<tr>
+<td><b>Thread:</b></td>
+<td>444</td>
+</tr>
+<tr>
+<td><b>Status:</b></td>
+<td><div style="color: green;">Green</div></td>
+</tr>
+</table>
+<h2>Sequence diagram</h2>
+<image src="34fcc08e.png" alt="SDedit image"/>
+<p>
+Generate the image by: <i>sdedit -t png -o /home/ochaloup/presentations/EAP7-500-jca-tracer/data/reports/TxInconsistentWhenHigherLoadTestCase_withoutPause_jta/ActiveMQConnectionDefinition/34fcc08e/3353699813196-3353710154722/34fcc08e.png /home/ochaloup/presentations/EAP7-500-jca-tracer/data/reports/TxInconsistentWhenHigherLoadTestCase_withoutPause_jta/ActiveMQConnectionDefinition/34fcc08e/3353699813196-3353710154722/34fcc08e.sdx </i>
+<h2>Description</h2>
+<table>
+<thead align="left">
+<th>Timestamp</th>
+<th>Description</th>
+</thead>
+<tbody>
+<tr>
+<td>3353699813196</td>
+<td>getConnectionListener()</td>
+</tr>
+<tr>
+<td>3353702260829</td>
+<td>enlistResource()</td>
+</tr>
+<tr>
+<td>3353704112448</td>
+<td>getConnection(7cd69bcd)</td>
+</tr>
+<tr>
+<td>3353707185518</td>
+<td>returnConnection(7cd69bcd)</td>
+</tr>
+<tr>
+<td>3353707651955</td>
+<td>delistResource()</td>
+</tr>
+<tr>
+<td>3353710154722</td>
+<td>returnConnectionListener()</td>
+</tr>
+</tbody>
+</table>
+<h2>Data</h2>
+<pre>
+IJTRACER-ActiveMQConnectionDefinition-5460947e-444-0-3353699813196-34fcc08e-DATA
+IJTRACER-ActiveMQConnectionDefinition-5460947e-444-20-3353702260829-34fcc08e-TransactionImple < ac, BasicAction: 0:ffff7f000001:_6ecf9687:57da655d:32 status: ActionStatus.RUNNING >-
+IJTRACER-ActiveMQConnectionDefinition-5460947e-444-40-3353704112448-34fcc08e-7cd69bcd-
+IJTRACER-ActiveMQConnectionDefinition-5460947e-444-41-3353707185518-34fcc08e-7cd69bcd-
+IJTRACER-ActiveMQConnectionDefinition-5460947e-444-30-3353707651955-34fcc08e-TransactionImple < ac, BasicAction: 0:ffff7f000001:_6ecf9687:57da655d:32 status: ActionStatus.RUNNING >-
+IJTRACER-ActiveMQConnectionDefinition-5460947e-444-10-3353710154722-34fcc08e-DATA
+</pre>
+<p>
+<a href="../index.html">Back</a>
+</body>
+</html>

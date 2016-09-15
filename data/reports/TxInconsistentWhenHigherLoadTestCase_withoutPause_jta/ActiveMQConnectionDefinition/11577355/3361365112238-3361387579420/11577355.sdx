@@ -1,0 +1,18 @@
+#![ConnectionListener: 11577355]
+#!>>
+#!Start: 3361365112238
+#!End  : 3361387579420
+#!<<
+application:Application[a]
+cm:ConnectionManager[a]
+pool:Pool[a]
+mcp:MCP[a]
+cl:ConnectionListener[a]
+
+application:cm.allocateConnection()
+cm:pool.getConnection()
+pool:mcp.getConnectionListener()
+mcp:cl.get()
+application:cl.getConnection(1c18f6ca)
+application:>cl.returnConnection(1c18f6ca)
+cl:mcp.returnConnectionListener()
